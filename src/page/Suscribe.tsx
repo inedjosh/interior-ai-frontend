@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 function Suscribe() {
-    return (
-        <div>
-            Suscribe
-        </div>
-    );
+    return <div>Suscribe</div>
 }
 
-export default Suscribe;
+export default Suscribe
