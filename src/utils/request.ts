@@ -1,59 +1,45 @@
 import axios from 'axios'
 
-export const getRequest = async (url: string) => {
-    try {
-        const { data } = await axios.get(url)
-
-        return data.data
-    } catch (error: any) {
-        throw new Error(error.response.data)
-    }
-}
-
 export const postRequest = async ({
     url,
-    body,
-    headers,
+    data,
 }: {
     url: string
-    body: any
-    headers: any
+    data: any
 }) => {
     try {
-        if (headers) {
-            const { data } = await axios.post(url, body, { headers })
-
-            return data.data
-        } else {
-            const { data } = await axios.post(url, body)
-
-            return data.data
-        }
+        const response = await axios.post(url, data)
+        return response.data
     } catch (error: any) {
-        throw new Error(error.response.data)
+        console.log(error)
+        throw new Error(error.response.data.message)
     }
 }
 
-export const puRequest = async ({
-    url,
-    body,
-    headers,
-}: {
-    url: string
-    body: any
-    headers: any
-}) => {
+export const putReqest = async ({ url, data }: { url: string; data: any }) => {
     try {
-        if (headers) {
-            const { data } = await axios.put(url, body, { headers })
-
-            return data.data
-        } else {
-            const { data } = await axios.put(url, body)
-
-            return data.data
-        }
+        const response = await axios.put(url, data)
+        console.log(response.data)
+        return response.data
     } catch (error: any) {
-        throw new Error(error.reponse.data)
+        throw new Error(error.response.data.message)
+    }
+}
+
+export const getRequest = async (url: string) => {
+    try {
+        const response = await axios.get(url)
+        return response.data
+    } catch (error: any) {
+        throw new Error(error.response.data.message)
+    }
+}
+
+export const deleteRequest = async (url: string) => {
+    try {
+        const response = await axios.delete(url)
+        return response.data
+    } catch (error: any) {
+        throw new Error(error.response.data.message)
     }
 }

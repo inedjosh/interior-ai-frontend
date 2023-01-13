@@ -9,20 +9,30 @@ import Suscribe from './page/Suscribe'
 import Login from './page/Login'
 import Register from './page/Register'
 import Verify from './page/Verify'
+import Header from './components/home/Header'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import ForgotPassword from './page/ForgotPassword'
+import ResetPassword from './page/resetPassword'
 
 function App() {
     return (
         <ChakraProvider theme={theme}>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/suscribtion" element={<Suscribe />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/verify" element={<Verify />} />
-            </Routes>
             <Box>
-                <Text>Hello</Text>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/suscribtion" element={<Suscribe />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/verify" element={<Verify />} />
+                    <Route
+                        path="/forgot_password"
+                        element={<ForgotPassword />}
+                    />
+                    <Route path="/reset_password" element={<ResetPassword />} />
+                </Routes>
+                <ToastContainer />
             </Box>
         </ChakraProvider>
     )

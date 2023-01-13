@@ -6,9 +6,8 @@ function index() {
     return (
         <Box>
             <Header />
-            <Text color={'#000'}>Hello</Text>
         </Box>
     )
 }
 
-export default index;
+export default index
