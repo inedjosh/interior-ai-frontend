@@ -82,7 +82,12 @@ function TextToImage() {
                     flexDirection={'column'}
                     alignItems={'center'}
                 >
-                    <Box w={'90%'} bg={'#202020'} h={'50px'} >
+                    <Box
+                        w={'90%'}
+                        bg={'#202020'}
+                        h={'50px'}
+                        borderRadius={'10px'}
+                    >
                         <Input
                             border={'none'}
                             outline={'none'}
@@ -95,6 +100,7 @@ function TextToImage() {
                             name="gender"
                             value={text}
                             onChange={(e) => setText(e.target.value)}
+                            borderRadius={'10px'}
                         />
                     </Box>
                     <Flex
@@ -103,7 +109,12 @@ function TextToImage() {
                         justifyContent={'space-between'}
                         flexDirection={['column', 'column', 'row']}
                     >
-                        <Box bg={'#202020'} h={'50px'} w={['100%', '100%', '48%', '48%']} >
+                        <Box
+                            bg={'#202020'}
+                            h={'50px'}
+                            w={['100%', '100%', '48%', '48%']}
+                            borderRadius={'10px'}
+                        >
                             <Select
                                 border={'none'}
                                 outline={'none'}
@@ -115,12 +126,18 @@ function TextToImage() {
                                 h={'50px'}
                                 name="gender"
                                 onChange={handleChange}
+                                borderRadius={'10px'}
                             >
                                 <option value={'male'}>Male</option>
                                 <option value={'female'}>Female</option>
                             </Select>
                         </Box>
-                        <Box bg={'#202020'} h={'50px'} w={['100%', '100%', '48%', '48%']}    >
+                        <Box
+                            bg={'#202020'}
+                            h={'50px'}
+                            w={['100%', '100%', '48%', '48%']}
+                            borderRadius={'10px'}
+                        >
                             <Select
                                 border={'none'}
                                 outline={'none'}
@@ -132,6 +149,7 @@ function TextToImage() {
                                 h={'50px'}
                                 onChange={handleChange}
                                 name={'category'}
+                                borderRadius={'10px'}
                             >
                                 {/* {accountType === "free"
                   ? freeWomenCategory.map((item, index) => (
@@ -155,8 +173,10 @@ function TextToImage() {
                     >
                         <Flex
                             w={['100%', '100%', '48%', '48%']}
-                                justifyContent={'space-between'}
-                                bg={'#202020'} h={'50px'}
+                            justifyContent={'space-between'}
+                            bg={'#202020'}
+                            h={'50px'}
+                            borderRadius={'10px'}
                         >
                             <Flex w={['47%']}>
                                 <Select
@@ -170,6 +190,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'size'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {size.map((size, index) => (
                     <option key={index} value={size.value}>
@@ -178,7 +199,12 @@ function TextToImage() {
                   ))} */}
                                 </Select>
                             </Flex>
-                            <Flex w={['47%']} bg={'#202020'} h={'50px'}>
+                            <Flex
+                                w={['47%']}
+                                bg={'#202020'}
+                                h={'50px'}
+                                borderRadius={'10px'}
+                            >
                                 <Select
                                     border={'none'}
                                     outline={'none'}
@@ -190,6 +216,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'sleeve'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {sleeve.map((item, index) => (
                     <option key={index} value={item.value}>
@@ -204,7 +231,13 @@ function TextToImage() {
                             justifyContent={'space-between'}
                             alignItems={'center'}
                         >
-                            <Flex w={['47%']} mt={['30px', '30px', '0']} bg={'#202020'} h={'50px'}>
+                            <Flex
+                                w={['47%']}
+                                mt={['30px', '30px', '0']}
+                                bg={'#202020'}
+                                h={'50px'}
+                                borderRadius={'10px'}
+                            >
                                 <Select
                                     border={'none'}
                                     outline={'none'}
@@ -216,6 +249,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'color'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {accountType === "free"
                     ? freeColor.map((item, index) => (
@@ -230,7 +264,13 @@ function TextToImage() {
                       ))} */}
                                 </Select>
                             </Flex>
-                            <Flex w={['47%']} mt={['30px', '30px', '0']} bg={'#202020'} h={'50px'}>
+                            <Flex
+                                w={['47%']}
+                                mt={['30px', '30px', '0']}
+                                bg={'#202020'}
+                                h={'50px'}
+                                borderRadius={'10px'}
+                            >
                                 <Select
                                     border={'none'}
                                     outline={'none'}
@@ -242,6 +282,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'color'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {accountType === "free" ? (
                     <option value={"Pro"}>Pro version only</option>
@@ -259,16 +300,19 @@ function TextToImage() {
                     <Flex
                         w={'90%'}
                         justifyContent={'space-between'}
-                            flexDirection={['column', 'column', 'row']}
-                            
+                        flexDirection={['column', 'column', 'row']}
                     >
                         <Flex
                             my={['20px', '20px', '10px']}
                             justifyContent={'space-between'}
-                                w={['100%', '100%', '48%']}
-                                
+                            w={['100%', '100%', '48%']}
                         >
-                            <Flex w={['47%']} bg={'#202020'} h={'50px'}>
+                            <Flex
+                                w={['47%']}
+                                bg={'#202020'}
+                                h={'50px'}
+                                borderRadius={'10px'}
+                            >
                                 <Select
                                     border={'none'}
                                     outline={'none'}
@@ -280,6 +324,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'realism'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {accountType === "free"
                     ? freeRealism.map((item, index) => (
@@ -294,7 +339,12 @@ function TextToImage() {
                       ))} */}
                                 </Select>
                             </Flex>
-                            <Flex w={['47%']} bg={'#202020'} h={'50px'}>
+                            <Flex
+                                w={['47%']}
+                                bg={'#202020'}
+                                h={'50px'}
+                                borderRadius={'10px'}
+                            >
                                 <Select
                                     border={'none'}
                                     outline={'none'}
@@ -306,6 +356,7 @@ function TextToImage() {
                                     h={'50px'}
                                     onChange={handleChange}
                                     name={'renders'}
+                                    borderRadius={'10px'}
                                 >
                                     {/* {accountType === "free" ? (
                     <option value={1}>1</option>

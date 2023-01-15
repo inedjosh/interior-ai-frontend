@@ -5,14 +5,13 @@ import Header from '../components/home/Header'
 import Hero from '../components/home/Hero'
 import StartUsing from '../components/home/StartUsing'
 
-
 function home() {
     return (
         <Box p={'20px'}>
             <Header />
             <Hero />
-        <StartUsing />
-        <Footer />
+            <StartUsing />
+            <Footer />
         </Box>
     )
 }

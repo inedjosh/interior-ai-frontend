@@ -1,4 +1,4 @@
-input[type="file"] {
+input[type='file'] {
     display: none;
 }
 
@@ -13,12 +13,12 @@ input[type="file"] {
     color: #fff;
     opacity: 0.5;
     border: 1px dashed #ccc;
-    border-radius:20px;
+    border-radius: 20px;
     justify-content: center;
     align-items: center;
-    font-size:14px;
+    font-size: 14px;
 }
 
-.icon{
-    width:20px
+.icon {
+    width: 20px;
 }
