@@ -43,7 +43,7 @@ const Header = () => {
                 {' '}
                 <Link to="/">
                     <HeadingText flex={'.4'} color={'#fff'}>
-                        FASHUN.AI
+                        INTERIOR.AI
                     </HeadingText>
                 </Link>
                 <UnorderedList
@@ -98,10 +98,10 @@ const Header = () => {
                                 alignItems="center"
                                 py="5"
                                 flexDirection={'column'}
-                                marginTop={'100px'}
+                                marginTop={'40px'}
                             >
-                                <ListItem mb={'100px'} listStyleType={'none'}>
-                                    <Link to="/">FUNSHUN AI</Link>
+                                <ListItem mb={'20px'} listStyleType={'none'}>
+                                    <Link to="/">INTERIOR.AI</Link>
                                 </ListItem>
                                 <ListItem mt={'50px'} listStyleType={'none'}>
                                     <Link to="/profile">Profile</Link>
@@ -112,13 +112,19 @@ const Header = () => {
                                 <ListItem mt={'50px'} listStyleType={'none'}>
                                     <Link to="/about">About Us</Link>
                                 </ListItem>
+                                <ListItem mt={'50px'} listStyleType={'none'}>
+                                    <Link to="/login">Login</Link>
+                                </ListItem>
+                                <ListItem mt={'50px'} listStyleType={'none'}>
+                                    <Link to="/register">Register</Link>
+                                </ListItem>
                             </UnorderedList>
                         </DrawerBody>
 
                         <DrawerFooter>
                             <Flex w={'100%'} justifyContent={'center'}>
                                 <BodyText color={'#000'}>
-                                    Funshun AI 2022
+                                    Interior AI 2022
                                 </BodyText>
                             </Flex>
                         </DrawerFooter>

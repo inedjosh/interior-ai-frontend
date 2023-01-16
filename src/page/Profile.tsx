@@ -25,10 +25,10 @@ const Profile = () => {
     }
 
     return (
-        <div>
+        <Box p={'30px'}>
             <Header />
             <Hello />
-        </div>
+        </Box>
     )
 }
 

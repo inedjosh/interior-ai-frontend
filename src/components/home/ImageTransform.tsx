@@ -6,6 +6,7 @@ import axios from 'axios'
 import BodyText from '../TextElements/BodyText'
 import { toast } from 'react-toastify'
 import './styles.css'
+import { colors } from '../../constants/colors'
 
 function ImageTransform() {
     const [details, setDetails] = useState({
@@ -87,7 +88,7 @@ function ImageTransform() {
                 <Image src={resultUrl} w={['90%', '90%', '95%']} h={'350px'} />
             ) : (
                 <Box w={['100%', '100%', '70%']}>
-                    <Box>
+                    <Box bg={colors.pryBck} borderRadius={'20px'}>
                         {!imgBlob ? (
                             <label className="custom-file-upload">
                                 <input type="file" onChange={handleImage} />

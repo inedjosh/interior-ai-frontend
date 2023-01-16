@@ -8,7 +8,7 @@ function Verify() {
     const resendVerificationMail = async () => {}
 
     return (
-        <Box>
+        <Box p={'10px'}>
             <Header />
             <Box h={'50vh'} w={'100vw'}>
                 <Flex
@@ -16,6 +16,8 @@ function Verify() {
                     justifyContent={'center'}
                     alignItems={'center'}
                     flexDirection={'column'}
+                    p={'10px'}
+                    mt={'10px'}
                 >
                     <Icon as={BiMailSend} fontSize={'150px'} />
                     <Text>
@@ -23,10 +25,10 @@ function Verify() {
                         click the button to verify your account, get 3 free
                         trials and continue
                     </Text>
-                    <Flex>
+                    <Flex mt={'20px'}>
                         <Text>Didn't get the mail?</Text>
                         <Text
-                            pl={'10px'}
+                            pl={'5px'}
                             color={'green'}
                             textDecoration={'underline'}
                             onClick={resendVerificationMail}

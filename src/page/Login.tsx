@@ -90,11 +90,11 @@ function Login() {
                         <Heading fontSize="30" fontWeight="bold">
                             Welcome Back
                         </Heading>
-                        <Text fontSize="14" py="5">
+                        <Text fontSize="14" py="5" >
                             Login and continue!
                         </Text>
                     </Box>
-                    <Flex mt={'-40px'} flexDirection={'column'}>
+                    <Flex mt={['0', '0', '-40px']} flexDirection={'column'}>
                         <Box w="100%">
                             <Text fontWeight="bold">Email Address</Text>
                             <Input

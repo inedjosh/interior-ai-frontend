@@ -1,9 +1,11 @@
-import { Box, Flex, Spinner } from '@chakra-ui/react'
+import { Box, Flex, Spinner, Image, Button } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { colors } from '../../constants/colors'
 import BodyText from '../TextElements/BodyText'
+import HeadingText from '../TextElements/Heading'
 import PryBtn from '../UiElements/PryBtn'
 
 const Hello = () => {
@@ -23,107 +25,131 @@ const Hello = () => {
     const handleLogout = () => {}
 
     return (
-        <div className="3xl:mx-auto 3xl:container">
-            <div className="text-white border-2 border-dashed border-neutral-700 rounded-[50px] my-20 py-20 px-10 flex flex-col sm:flex-row items-center justify-between bg-black-white">
-                <div className="flex flex-col sm:flex-row items-center sm:items-end">
-                    <img
-                        src="./images/userProfile.png"
-                        className="w-[150px] h-[150px]"
-                        alt=""
-                    />
+        <Box color={'#000'}>
+            <Flex
+                justifyContent={['flex-start', 'flex-start', 'space-between']}
+                borderRadius={'20px'}
+                border={'2px dashed #ccc'}
+                mt={'20px'}
+                py={'50px'}
+                px={['10px', '60px']}
+                bg={colors.pryBck}
+                flexDirection={['column', 'column', 'row']}
+            >
+                <Flex alignItems={['flex-start', 'flex-start','center']}>
+                    <Image src="./images/userProfile.png" w={'80px'} alt="" />
 
-                    <div className="sm:px-5 font-semibold py-10 sm:py-0 sm:h-[100px] flex flex-col justify-between">
-                        <p className="text-center sm:text-left text-2xl sm:text-[80px]">
+                    <Box pl={'10px'}>
+                        <HeadingText
+                            color={'#fff'}
+                            textTransform={'uppercase'}
+                            fontSize={'50px'}
+                        >
                             Hello!
-                        </p>
-                        <p>inedu</p>
-                    </div>
-                </div>
+                        </HeadingText>
+                        <BodyText fontSize={'20px'} color={'#fff'}>
+                            inedu@gmail.com
+                        </BodyText>
+                    </Box>
+                </Flex>
 
-                <img src="./images/cloud.png" alt="" />
-            </div>
+                <Flex mt={['20px', '20px', '0']} justifyContent={'center'} alignItems={'center'}>
+                    <Image src="./images/cloud.png" alt="" />
+                </Flex>
+            </Flex>
 
-            {auth.account_type !== 'free' ? (
-                <div className="flex flex-col items-center sm:items-start py-10 md:px-0 md:mx-20">
-                    <div className="w-full bg-white rounded-[40px] sm:px-10 p-5 py-20 text-center sm:text-left sm:text-xl">
-                        <h1 className="text-2xl sm:text-5xl font-bold">
+            {auth.account_type === 'free' ? (
+                <Box
+                    bg={colors.pryBck}
+                    mt={'50px'}
+                    w={'100%'}
+                    p={'30px'}
+                    borderRadius={'20px'}
+                >
+                    <Box py={'10px'}>
+                        <HeadingText color={'#fff'}>
                             Account overview
-                        </h1>
+                        </HeadingText>
 
-                        <div className="py-7">
-                            <p className="font-bold">Your plan</p>
-                            <p>PREMIUM INDIVIDUAL</p>
-                        </div>
+                        <Box py={'10px'} color={'#fff'}>
+                            <BodyText color={'#fff'}>Your plan</BodyText>
+                            <BodyText color={'#fff'}>
+                                PREMIUM INDIVIDUAL
+                            </BodyText>
+                        </Box>
 
-                        <div className="flex xl:flex-row flex-col justify-between pt-10">
-                            <div>
-                                <p className="pb-5">
+                        <Box py={'10px'}>
+                            <Box>
+                                <BodyText color={'#fff'}>
                                     You have - {auth.trials} trials more
-                                </p>
-                                <p className="font-bold underline text-zinc-600">
+                                </BodyText>
+                                <BodyText py={'10px'} color={'#fff'}>
                                     Learn more about your plan
-                                </p>
-                            </div>
+                                </BodyText>
+                            </Box>
 
-                            <div className="md:w-[350px] py-10 xl:py-0">
-                                <div>Payment details</div>
-                                <div>
+                            <Box py={'10px'}>
+                                <BodyText color={'#fff'}>
+                                    Payment details
+                                </BodyText>
+                                <BodyText color={'#fff'}>
                                     Your next bill is for 900.00 NGN on monday.
-                                </div>
-                                <div>
-                                    <BodyText color={'#000'}>
+                                </BodyText>
+                                <Box>
+                                    <BodyText color={'#fff'}>
                                         Your card ending on{' '}
                                         {auth.billing?.card_last_4digits}{' '}
                                     </BodyText>
-                                    <BodyText color={'#000'}>
+                                    <BodyText color={'#fff'}>
                                         Expires on {auth.billing?.expiry}
                                     </BodyText>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
 
-                    <button
-                        className={`bg-blue-purple text-white font-semibold rounded-lg px-10 py-5 my-10 outline-none lg:mr-8`}
-                    >
-                        Renew payment
-                    </button>
-                </div>
+                    <Button>Renew payment</Button>
+                </Box>
             ) : (
                 <Box>
-                    <div className="flex flex-col items-center sm:items-start py-10 md:px-0 md:mx-20">
-                        <div className="w-full bg-white rounded-[40px] sm:px-10 p-5 py-20 text-center sm:text-left sm:text-xl">
-                            <h1 className="text-2xl sm:text-5xl font-bold">
+                    <Flex justifyContent={'center'} alignItems={'center'}>
+                        <Box
+                            bg={colors.pryBck}
+                            mt={'50px'}
+                            w={'100%'}
+                            p={'30px'}
+                            borderRadius={'20px'}
+                        >
+                            <HeadingText color={'#fff'}>
                                 Account overview
-                            </h1>
+                            </HeadingText>
 
-                            <div className="py-7">
-                                <p className="font-bold">Your plan</p>
-                                <p>FREE PLAN</p>
-                            </div>
+                            <Box py={'10px'}>
+                                <BodyText color={'#fff'}>Your plan</BodyText>
+                                <BodyText color={'#fff'}>FREE PLAN</BodyText>
+                            </Box>
 
-                            <div className="flex xl:flex-row flex-col justify-between pt-10">
-                                <div>
-                                    <p className="pb-5">
+                            <Box>
+                                <Box py={'10px'}>
+                                    <BodyText color={'#fff'}>
                                         You have - {auth.trials} trials more
-                                    </p>
-                                    <p className="font-bold underline text-zinc-600">
+                                    </BodyText>
+                                    <BodyText py={'30px'} color={'#fff'}>
                                         Learn more about our free plans
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <Flex mt={'30px'}>
-                            <PryBtn onClick={handlePro}>Buy trials</PryBtn>
-                            <PryBtn ml={'30px'} onClick={handleLogout}>
-                                Logout
-                            </PryBtn>
-                        </Flex>
-                    </div>
+                                    </BodyText>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Flex>
+                    <Flex mt={'30px'}>
+                        <PryBtn onClick={handlePro}>Buy trials</PryBtn>
+                        <PryBtn ml={'30px'} onClick={handleLogout}>
+                            Logout
+                        </PryBtn>
+                    </Flex>
                 </Box>
             )}
-        </div>
+        </Box>
     )
 }
 

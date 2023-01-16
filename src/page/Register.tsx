@@ -40,7 +40,7 @@ function Signup() {
         try {
             loader('md')
             const data = await postRequest({ url, data: details })
-            navigate('/verify')
+            navigate(`/verify&email=${details.email}`)
         } catch (error: any) {
             toast.error(error.message)
         }
@@ -112,7 +112,7 @@ function Signup() {
                         <Flex
                             justifyContent={'space-between'}
                             flexDirection={['column', 'column', 'row']}
-                            my="5"
+                            my={['0', '0', "5"]}
                         >
                             <Box w={['100%', '100%', '47%']}>
                                 <Text fontWeight="bold">First Name</Text>
@@ -150,7 +150,7 @@ function Signup() {
                         <Flex
                             justifyContent={'space-between'}
                             flexDirection={['column', 'column', 'row']}
-                            my="5"
+                           my={['0', '0', "5"]}
                         >
                             <Box w={['100%', '100%', '47%']}>
                                 <Text fontWeight="bold">Password</Text>

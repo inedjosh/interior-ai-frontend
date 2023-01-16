@@ -1,4 +1,4 @@
-import { Button, Flex, Box, Image, Text } from '@chakra-ui/react'
+import { Button, Flex, Box, Image, Text, Show, Hide } from '@chakra-ui/react'
 import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
@@ -12,8 +12,8 @@ const Hero = () => {
 
     return (
         <Flex bg={'#202020'} borderRadius={'10px'} my={'20px'} color={'#fff'}>
-            <Flex flexDirection={'column'} flex={'.5'} p={'20px'}>
-                <HeadingText fontSize={'70px'}>
+            <Flex flexDirection={'column'} flex={['1', '1', '.5']} p={'20px'}>
+                <HeadingText fontSize={['40px', '40px', '70px']}>
                     Get{' '}
                     <Text as="span" color={'#F602CA'}>
                         new
@@ -38,7 +38,7 @@ const Hero = () => {
                     </PryBtn>
                 </Flex>
             </Flex>
-
+            <Hide below='md'>
             <Flex flex={'.5'}>
                 <Flex h={'100%'} flex={'.5'} flexDirection={'column'}>
                     <Box
@@ -108,7 +108,8 @@ const Hero = () => {
                         />
                     </Box>
                 </Flex>
-            </Flex>
+                </Flex>
+                </Hide>
         </Flex>
     )
 }
