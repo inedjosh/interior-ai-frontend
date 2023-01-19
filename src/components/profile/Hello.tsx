@@ -36,7 +36,7 @@ const Hello = () => {
                 bg={colors.pryBck}
                 flexDirection={['column', 'column', 'row']}
             >
-                <Flex alignItems={['flex-start', 'flex-start','center']}>
+                <Flex alignItems={['flex-start', 'flex-start', 'center']}>
                     <Image src="./images/userProfile.png" w={'80px'} alt="" />
 
                     <Box pl={'10px'}>
@@ -53,7 +53,11 @@ const Hello = () => {
                     </Box>
                 </Flex>
 
-                <Flex mt={['20px', '20px', '0']} justifyContent={'center'} alignItems={'center'}>
+                <Flex
+                    mt={['20px', '20px', '0']}
+                    justifyContent={'center'}
+                    alignItems={'center'}
+                >
                     <Image src="./images/cloud.png" alt="" />
                 </Flex>
             </Flex>

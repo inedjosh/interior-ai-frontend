@@ -31,14 +31,13 @@ function Login() {
         setDetails({ ...details, [name]: value })
     }
 
-    const url = `${baseUrl}/auth/login`
+    const url = `/auth/login`
 
     const loginUser = async () => {
         try {
             const data = await postRequest({ url, data: details })
             console.log(data)
-            localStorage.setItem('userToken', data.token)
-            localStorage.setItem('userEmail', data.email)
+            localStorage.setItem('persist_user', JSON.stringify(true))
             navigate('/')
         } catch (error: any) {
             toast.error(error.message)
@@ -90,7 +89,7 @@ function Login() {
                         <Heading fontSize="30" fontWeight="bold">
                             Welcome Back
                         </Heading>
-                        <Text fontSize="14" py="5" >
+                        <Text fontSize="14" py="5">
                             Login and continue!
                         </Text>
                     </Box>

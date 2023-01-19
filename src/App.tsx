@@ -16,29 +16,29 @@ import ForgotPassword from './page/ForgotPassword'
 import ResetPassword from './page/resetPassword'
 import About from './page/About'
 import Faq from './page/Faq'
+import PersistLogin from './components/PersistLogin'
 
 function App() {
     return (
-        <ChakraProvider theme={theme}>
-            <Box>
-                <Routes>
+        <Box>
+            <Routes>
+                <Route path="/forgot_password" element={<ForgotPassword />} />
+                <Route path="/reset_password" element={<ResetPassword />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/verify" element={<Verify />} />
+
+                {/* protected Routes */}
+                <Route element={<PersistLogin />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/suscribtion" element={<Suscribe />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/verify" element={<Verify />} />
-                    <Route
-                        path="/forgot_password"
-                        element={<ForgotPassword />}
-                    />
-                    <Route path="/reset_password" element={<ResetPassword />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/faq" element={<Faq />} />
-                </Routes>
-                <ToastContainer />
-            </Box>
-        </ChakraProvider>
+                </Route>
+            </Routes>
+            <ToastContainer />
+        </Box>
     )
 }
 

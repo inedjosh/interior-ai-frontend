@@ -136,8 +136,8 @@ function TextToImage() {
                             bg={'#202020'}
                             h={'50px'}
                             w={['100%', '100%', '48%', '48%']}
-                                borderRadius={'10px'}
-                                mt={[ '20px', '20px', '0']}
+                            borderRadius={'10px'}
+                            mt={['20px', '20px', '0']}
                         >
                             <Select
                                 border={'none'}
@@ -381,7 +381,11 @@ function TextToImage() {
                         flexDirection={['column']}
                         alignItems={'center'}
                     >
-                        <PryBtn mt={['-40px', '-40px', '0']} w={['90%', '90%', '50%']} bg={'#791AE9'}>
+                        <PryBtn
+                            mt={['-40px', '-40px', '0']}
+                            w={['90%', '90%', '50%']}
+                            bg={'#791AE9'}
+                        >
                             {loading ? <Spinner /> : 'Generate Image'}
                         </PryBtn>
                         {/* {error && (

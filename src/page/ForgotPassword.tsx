@@ -19,7 +19,7 @@ function ForgotPassword() {
     const [email, setEmail] = useState('')
     const navigate = useNavigate()
 
-    const url = `${baseUrl}/auth/forgot_password`
+    const url = `/auth/forgot_password`
 
     const forgotPassword = async () => {
         try {

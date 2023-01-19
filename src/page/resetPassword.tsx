@@ -33,7 +33,7 @@ function ResetPassword() {
         setDetails({ ...details, [name]: value })
     }
 
-    const url = `${baseUrl}/auth/reset_password`
+    const url = `/auth/reset_password`
 
     const resetPassword = async () => {
         try {

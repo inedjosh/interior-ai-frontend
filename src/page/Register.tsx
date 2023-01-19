@@ -34,7 +34,7 @@ function Signup() {
         setDetails({ ...details, [name]: value })
     }
 
-    const url = `${baseUrl}/auth/register`
+    const url = `/auth/register`
 
     const registerUser = async () => {
         try {
@@ -112,7 +112,7 @@ function Signup() {
                         <Flex
                             justifyContent={'space-between'}
                             flexDirection={['column', 'column', 'row']}
-                            my={['0', '0', "5"]}
+                            my={['0', '0', '5']}
                         >
                             <Box w={['100%', '100%', '47%']}>
                                 <Text fontWeight="bold">First Name</Text>
@@ -150,7 +150,7 @@ function Signup() {
                         <Flex
                             justifyContent={'space-between'}
                             flexDirection={['column', 'column', 'row']}
-                           my={['0', '0', "5"]}
+                            my={['0', '0', '5']}
                         >
                             <Box w={['100%', '100%', '47%']}>
                                 <Text fontWeight="bold">Password</Text>

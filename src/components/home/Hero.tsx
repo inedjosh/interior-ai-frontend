@@ -38,78 +38,78 @@ const Hero = () => {
                     </PryBtn>
                 </Flex>
             </Flex>
-            <Hide below='md'>
-            <Flex flex={'.5'}>
-                <Flex h={'100%'} flex={'.5'} flexDirection={'column'}>
-                    <Box
-                        borderBottomRightRadius={'10px'}
-                        borderBottomLeftRadius={'10px'}
-                        mx={'10px'}
-                        overflow={'hidden'}
-                        h={'70%'}
-                        mt={'0px'}
-                    >
-                        <Image
-                            h={'100%'}
-                            src="./images/img-one.jpeg"
-                            objectFit={'cover'}
-                            alt=""
-                        />
-                    </Box>
-                    <Box
-                        borderTopRightRadius={'10px'}
-                        w={'95%'}
-                        borderTopLeftRadius={'10px'}
-                        mx={'10px'}
-                        overflow={'hidden'}
-                        h={'30%'}
-                        mt={'10px'}
-                    >
-                        <Image
-                            h={'100%'}
-                            objectFit={'cover'}
-                            w={'100%'}
-                            src="./images/img-two.jpeg"
-                            alt=""
-                        />
-                    </Box>
+            <Hide below="md">
+                <Flex flex={'.5'}>
+                    <Flex h={'100%'} flex={'.5'} flexDirection={'column'}>
+                        <Box
+                            borderBottomRightRadius={'10px'}
+                            borderBottomLeftRadius={'10px'}
+                            mx={'10px'}
+                            overflow={'hidden'}
+                            h={'70%'}
+                            mt={'0px'}
+                        >
+                            <Image
+                                h={'100%'}
+                                src="./images/img-one.jpeg"
+                                objectFit={'cover'}
+                                alt=""
+                            />
+                        </Box>
+                        <Box
+                            borderTopRightRadius={'10px'}
+                            w={'95%'}
+                            borderTopLeftRadius={'10px'}
+                            mx={'10px'}
+                            overflow={'hidden'}
+                            h={'30%'}
+                            mt={'10px'}
+                        >
+                            <Image
+                                h={'100%'}
+                                objectFit={'cover'}
+                                w={'100%'}
+                                src="./images/img-two.jpeg"
+                                alt=""
+                            />
+                        </Box>
+                    </Flex>
+                    <Flex h={'100%'} flex={'.5'} flexDirection={'column'}>
+                        <Box
+                            borderBottomRightRadius={'10px'}
+                            w={'90%'}
+                            borderBottomLeftRadius={'10px'}
+                            mx={'10px'}
+                            overflow={'hidden'}
+                            h={'30%'}
+                            mt={'0px'}
+                        >
+                            <Image
+                                h={'100%'}
+                                objectFit={'cover'}
+                                w={'100%'}
+                                src="./images/img-three.jpeg"
+                                alt=""
+                            />
+                        </Box>
+                        <Box
+                            borderTopRightRadius={'10px'}
+                            borderTopLeftRadius={'10px'}
+                            mx={'10px'}
+                            overflow={'hidden'}
+                            h={'70%'}
+                            mt={'10px'}
+                        >
+                            <Image
+                                h={'100%'}
+                                src="./images/img-four.jpeg"
+                                objectFit={'cover'}
+                                alt=""
+                            />
+                        </Box>
+                    </Flex>
                 </Flex>
-                <Flex h={'100%'} flex={'.5'} flexDirection={'column'}>
-                    <Box
-                        borderBottomRightRadius={'10px'}
-                        w={'90%'}
-                        borderBottomLeftRadius={'10px'}
-                        mx={'10px'}
-                        overflow={'hidden'}
-                        h={'30%'}
-                        mt={'0px'}
-                    >
-                        <Image
-                            h={'100%'}
-                            objectFit={'cover'}
-                            w={'100%'}
-                            src="./images/img-three.jpeg"
-                            alt=""
-                        />
-                    </Box>
-                    <Box
-                        borderTopRightRadius={'10px'}
-                        borderTopLeftRadius={'10px'}
-                        mx={'10px'}
-                        overflow={'hidden'}
-                        h={'70%'}
-                        mt={'10px'}
-                    >
-                        <Image
-                            h={'100%'}
-                            src="./images/img-four.jpeg"
-                            objectFit={'cover'}
-                            alt=""
-                        />
-                    </Box>
-                </Flex>
-                </Flex>
-                </Hide>
+            </Hide>
         </Flex>
     )
 }
