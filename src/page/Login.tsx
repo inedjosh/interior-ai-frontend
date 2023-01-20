@@ -15,7 +15,7 @@ import { toast } from 'react-toastify'
 import { baseUrl } from '../config'
 import useAuth from '../hooks/useAuth'
 import { postRequest } from '../utils/request'
-import Cookie from "js-cookie";
+import Cookie from 'js-cookie'
 import { toUnicode } from 'punycode'
 import axios from '../api/axios'
 
@@ -26,7 +26,7 @@ function Login() {
     })
     const navigate = useNavigate()
 
-    const {setAuth} = useAuth()
+    const { setAuth } = useAuth()
 
     const handleChange = (e: React.SyntheticEvent) => {
         const target = e.target as HTMLInputElement
@@ -41,13 +41,12 @@ function Login() {
 
     const loginUser = async () => {
         try {
-            const data = await axios.post(url, details,)
-            console.log(data);
-            localStorage.setItem('persist_user', JSON.stringify(true));
+            const data = await axios.post(url, details)
+            console.log(data)
+            localStorage.setItem('persist_user', JSON.stringify(true))
             navigate('/')
-            
         } catch (error: any) {
-            console.log(error);
+            console.log(error)
             toast.error(error.message)
         }
     }

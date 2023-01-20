@@ -11,8 +11,8 @@ const Profile = () => {
     const [error, setError] = useState('')
 
     const { auth } = useAuth()
-    
-    console.log(auth);
+
+    console.log(auth)
 
     if (loading) {
         return (

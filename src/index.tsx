@@ -12,15 +12,12 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            
             <AuthProvider>
-                  <ChakraProvider theme={theme}>
-                <Routes>
-                  
+                <ChakraProvider theme={theme}>
+                    <Routes>
                         <Route path="/*" element={<App />} />
-                
                     </Routes>
-                        </ChakraProvider>
+                </ChakraProvider>
             </AuthProvider>
         </BrowserRouter>
     </React.StrictMode>
