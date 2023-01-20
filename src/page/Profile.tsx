@@ -10,9 +10,11 @@ const Profile = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
 
-    const { auth } = useAuth()
+    const { auth } = useAuth().auth
 
-    console.log(auth)
+    console.log(auth);
+
+   
 
     if (loading) {
         return (
@@ -32,7 +34,7 @@ const Profile = () => {
     return (
         <Box p={'30px'}>
             <Header />
-            <Hello />
+            <Hello user={auth} />
         </Box>
     )
 }

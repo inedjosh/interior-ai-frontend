@@ -14,11 +14,15 @@ function useRefresh() {
 
         try {
             const { data } = await axios.get('/auth/refresh')
-            console.log(data)
+            console.log(data.data)
             setAuth({
                 auth: {
-                    user: data.data.user,
+                    email: data.data.user.email,
+                    first_name: data.data.user.first_name,
                     access_token: data.data.access_token,
+                    trials: data.data.user.trials,
+                    roles: data.data.user.role,
+                    verified: data.data.user.account_verified
                 },
             })
             return data.access_token

@@ -8,7 +8,7 @@ import BodyText from '../TextElements/BodyText'
 import HeadingText from '../TextElements/Heading'
 import PryBtn from '../UiElements/PryBtn'
 
-const Hello = () => {
+const Hello = ({user}: any) => {
     const auth = {
         account_type: 'free',
         trials: 0,
@@ -48,7 +48,7 @@ const Hello = () => {
                             Hello!
                         </HeadingText>
                         <BodyText fontSize={'20px'} color={'#fff'}>
-                            inedu@gmail.com
+                            {user.first_name}
                         </BodyText>
                     </Box>
                 </Flex>
@@ -85,7 +85,7 @@ const Hello = () => {
                         <Box py={'10px'}>
                             <Box>
                                 <BodyText color={'#fff'}>
-                                    You have - {auth.trials} trials more
+                                    You have - {user.trials} trials more
                                 </BodyText>
                                 <BodyText py={'10px'} color={'#fff'}>
                                     Learn more about your plan
