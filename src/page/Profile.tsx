@@ -4,10 +4,15 @@ import { baseUrl } from '../config'
 import { Box, Flex, Spinner } from '@chakra-ui/react'
 import Header from '../components/home/Header'
 import Hello from '../components/profile/Hello'
+import useAuth from '../hooks/useAuth'
 
 const Profile = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+
+    const { auth } = useAuth()
+    
+    console.log(auth);
 
     if (loading) {
         return (
