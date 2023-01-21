@@ -1,4 +1,4 @@
-export default (data) => {
+export default (data: any) => {
     return {
         email: data.data.user.email,
         first_name: data.data.user.first_name,

@@ -17,6 +17,7 @@ import ResetPassword from './page/resetPassword'
 import About from './page/About'
 import Faq from './page/Faq'
 import PersistLogin from './components/PersistLogin'
+import AuthenticateUser from './components/AuthenticateUser'
 
 function App() {
     return (
@@ -28,13 +29,16 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/verify" element={<Verify />} />
 
-                {/* protected Routes */}
+                {/* persist user */}
                 <Route element={<PersistLogin />}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
+            
                     <Route path="/suscribtion" element={<Suscribe />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/faq" element={<Faq />} />
+                    <Route element={<AuthenticateUser />}>
+                                <Route path="/profile" element={<Profile />} />
+                    </Route>
                 </Route>
             </Routes>
             <ToastContainer />
